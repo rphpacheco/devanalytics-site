@@ -6,7 +6,12 @@ import { jsx, Flex, Container, Heading, Text, Button } from 'theme-ui';
 import Image from 'components/image';
 import Play from 'components/icons/play';
 import dynamic from 'next/dynamic';
+import ListItems from 'components/cards/list-items'
 // import ModalVideo from 'react-modal-video';
+import { BsCollectionPlay, BsCloud } from 'react-icons/bs'
+import { BiMoviePlay } from 'react-icons/bi'
+import { FaUserTie } from 'react-icons/fa'
+
 const ModalVideo = dynamic(
   () => {
     return import('react-modal-video');
@@ -14,6 +19,61 @@ const ModalVideo = dynamic(
   { ssr: false }
 );
 import banner from 'assets/images/banner.png';
+
+import icon1 from 'assets/images/icons/1.png';
+import icon2 from 'assets/images/icons/2.png';
+import icon3 from 'assets/images/icons/3.png';
+
+const data = [
+  {
+    id: 1,
+    icon: BsCollectionPlay,
+    title: 'Cursos Online',
+    description: `Disponibilizamos em nossa
+    plataforma, uma gama de 
+    cursos que vão do 
+    desenvolvimento de
+    softwares a análises e 
+    visualização de dados.`,
+    moreLink: '#',
+  },
+  {
+    id: 2,
+    icon: BiMoviePlay,
+    title: 'Conteúdo Gratuito',
+    description: `Inscreva-se em nosso canal 
+    no YouTube, onde 
+    constantemente estamos 
+    disponibilizando muito 
+    material de altíssima
+    qualidade!.`,
+    moreLink: '#',
+  },
+  {
+    id: 3,
+    icon: BsCloud,
+    title: 'Soluções SaaS',
+    description: `Disponibilizamos serviços 
+    voltados a automação de 
+    processos envolvendo 
+    soluções de analytics
+    tudo como Software as
+    a Service.`,
+    moreLink: '#',
+  },
+  {
+    id: 4,
+    icon: FaUserTie,
+    title: 'Consultorias',
+    description: `Prestamos serviços de 
+    consultorias a empresas
+    que estejam 
+    procurando soluções em 
+    projetos de visualização de
+    dados.`,
+    moreLink: '#',
+  }
+]
 
 const Banner = () => {
   const [videoOpen, setVideoOpen] = useState(false);
@@ -52,7 +112,15 @@ const Banner = () => {
           </Flex>
         </div>
         <Flex as="figure" sx={styles.illustration}>
-          <Image src={banner} alt="banner" />
+          {/*<Image src={banner} alt="banner" />*/}
+          <div sx={styles.wrapper}>
+          {data.map(item => (
+            <ListItems 
+              key={item.id} 
+              data={item}
+            />
+          ))}
+          </div>
         </Flex>
       </Container>
     </section>
@@ -100,6 +168,12 @@ const styles = {
       marginTop: [3, null, null, 6],
     },
   },
+  wrapper: {
+    mt: 6,
+    gap: [6, null, null, '60px 20px'],
+    display: 'flex',
+    maxWidth: 1175,
+  },
   buttonGroup: {
     alignItems: 'center',
     justifyContent: 'center',
@@ -125,9 +199,9 @@ const styles = {
     },
   },
   illustration: {
-    transform: ['scale(1.20)', null, null, 'none'],
+    transform: ['scale(1.20)', null, null, 'scale(0.80)'],
     alignItems: 'center',
     display: 'flex',
-    marginTop: [2, null, null, -4, -5],
+    marginTop: [2, null, null, -4, -3]
   },
 };
