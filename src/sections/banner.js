@@ -88,10 +88,10 @@ const Banner = () => {
           <Heading as="h1">
             Domine a carreira de Análise e Visualização de Dados
           </Heading>
-          <Text as="p">Chegue ao próximo nível através dos nossos cursos e conteúdos gratuito.
-          Desde a extração, tranformação, modelagem, até a visualização. Você terá domínio
-          pleno sobre as tecnologias mais usadas no mercado.
-          Seja um profissional requisitado no merdado de dados!</Text>
+          <Text as="p">Chegue ao próximo nível através dos nossos cursos e conteúdos gratuitos.
+          Desde a extração, tranformação, modelagem, chegando até a visualização. Você terá domínio
+          pleno sobre as tecnologias mais usadas no mercado.</Text>
+          <Text as="p">Seja um profissional requisitado no merdado de dados!</Text>
           <Flex sx={styles.buttonGroup}>
             <Button variant="primary" sx={styles.btnPrimary}>
               Quero fazer parte disso!
@@ -140,7 +140,7 @@ const styles = {
       backgroundColor: 'white',
       content: `''`,
       position: 'absolute',
-      height: [30, null, null, 70, 85, 120],
+      height: [30, null, null, 70, 85, 0],
       bottom: 0,
       width: '100%',
       zIndex: -1,

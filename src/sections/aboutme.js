@@ -5,34 +5,52 @@ import { jsx, Flex, Container, Heading, Text, Button } from 'theme-ui';
 import Image from 'components/image';
 import Play from 'components/icons/play';
 import aboutme from 'assets/images/aboutme.png';
+import { BsLinkedin } from 'react-icons/bs'
+import { GoMarkGithub } from 'react-icons/go';
 
 const AboutMe = () => {
   return (
     <section id="about" sx={styles.section}>
       <Container sx={styles.container}>
-        <div sx={styles.content}>
-          <Heading as="h1">
-            Domine a carreira de Análise e Visualização de Dados
-          </Heading>
-          <Text as="p">Chegue ao próximo nível através dos nossos cursos e conteúdos gratuito.
-          Desde a extração, tranformação, modelagem, até a visualização. Você terá domínio
-          pleno sobre as tecnologias mais usadas no mercado.
-          Seja um profissional requisitado no merdado de dados!</Text>
-          <Flex sx={styles.buttonGroup}>
-            <Button variant="primary" sx={styles.btnPrimary}>
-              Quero fazer parte disso!
+        <Flex as="figure" sx={styles.illustration}>
+          <Flex sx={styles.illustration.container}> 
+            <Image src={aboutme} alt="aboutme" width="150px" />
+            <Flex
+              sx={styles.illustration.description}
+            >
+              <Heading as="h2">Raphael Pacheco</Heading>
+              <Text>devAnalytics</Text>
+            </Flex>
+          </Flex>
+          <Flex sx={styles.illustration.buttons}>
+            <Button
+              variant="outlined"
+              sx={styles.btnOutlined}
+            >
+              LINKEDIN <BsLinkedin fill="#FF4D00" />
             </Button>
             <Button
               variant="outlined"
               sx={styles.btnOutlined}
             >
-              Veja nossos conteúdos <Play fill="#FF4D00" />
+              GITHUB <GoMarkGithub fill="#FF4D00" />
             </Button>
           </Flex>
-        </div>
-        <Flex as="figure" sx={styles.illustration}>
-          <Image src={aboutme} alt="aboutme" width="400px" />
         </Flex>
+        <div sx={styles.content}>
+            <Heading as="h1">
+              Fala pessoal, tudo bem?
+            </Heading>
+            <Text as="p">Raphael Pacheco é Analista de BI, FullStack Developer, consultor, músico  e 
+            criador de conteúdo.
+            Trabalha ná área de dados desde 2010, atuando em projetos para grandes
+            empresas como Santander, BR Distribuidora, Volkswagen, Mercedes Benz
+            Algar Telecom, Thomson Reuters, Sebrae, Portobello e etc.
+            Através do canal devAnalytics no YouTube, começou a compartilhar seu
+            conhecimento adquirido em sua trajetória profissional e agora está 
+            disponibilizando também cursos completos para quem quer atuar no ramo 
+            de desenvolvolvimento de aplicações web e análise e visualização de dados</Text>
+        </div>
       </Container>
     </section>
   );
@@ -42,7 +60,7 @@ export default AboutMe;
 
 const styles = {
   section: {
-    backgroundColor: '#212122',
+    backgroundColor: '#131313',
     // pt: [8, null, null, null, 10, 14],
     // pb: [8, null, null, null, 10, 14],
     position: 'relative',
@@ -51,7 +69,7 @@ const styles = {
       backgroundColor: 'white',
       content: `''`,
       position: 'absolute',
-      height: [30, null, null, 70, 85, 120],
+      height: [0, null, null, 0, 0, 0],
       bottom: 0,
       width: '100%',
       zIndex: -1,
@@ -61,43 +79,32 @@ const styles = {
     minHeight: [null, null, null, null, null, '100vh'],
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'flex-end',
-    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    flexDirection: 'row',
   },
   content: {
-    maxWidth: [null, null, null, 570, 690],
+    maxWidth: [null, null, null, 470, 560],
     textAlign: 'center',
-    marginTop: [18, null, null, 22, 180],
+    marginTop: [0, null, null, 0, 0],
     h1: {
       color: 'white',
       fontSize: [7, null, null, 12, 14],
-      lineHeight: 1.35,
+      lineHeight: 1.55,
     },
     p: {
       color: rgba('white', 0.8),
       fontSize: [1, null, null, 2],
-      marginTop: [3, null, null, 6],
+      marginTop: [4, null, null, 3],
     },
-  },
-  buttonGroup: {
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: [6, null, null, 8],
-    position: 'relative',
-    zIndex: 2,
-    button: {
-      px: ['12px', null, null, '18px'],
-    },
-  },
-  btnPrimary: {
-    backgroundColor: '#FF4D00'
   },
   btnOutlined: {
+    width: '22vw',
     borderColor: rgba('white', 0.25),
     color: 'white',
-    ml: 3,
+    mt: 10,
+    ml: 0,
     svg: {
-        ml: 2,
+        ml: 4,
     },
     ':hover': {
       borderColor: "#FF4D00"
@@ -107,9 +114,26 @@ const styles = {
     transform: ['scale(1.20)', null, null, 'none'],
     alignItems: 'center',
     display: 'flex',
-    marginTop: [2, null, null, -4, -3],
+    flexDirection: 'column',
+    padding: 10,
+    marginTop: [0, null, null, 0, 0],
     img: {
         borderRadius: '100%',
+    },
+    container: {
+      alignItems: 'center'
+    },
+    buttons: {
+      flexDirection: 'column',
+      margin: 0
+    },
+    description: {
+      margin: 6,
+      flexDirection: 'column',
+      h2: {
+        color: '#999999'
       },
+      color: '#666666'
+    }
   },
 };

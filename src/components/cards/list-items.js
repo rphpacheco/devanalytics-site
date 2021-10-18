@@ -33,7 +33,7 @@ const styles = {
     feature: {
         maxWidth: 280,
         padding: '32px',
-        backgroundColor: "#353437",
+        backgroundColor: "#3534374D",
         border: '1px solid #3D3C42',
         borderRadius: '10px',
         display: [null, null, null, null, null, 'flex'],
