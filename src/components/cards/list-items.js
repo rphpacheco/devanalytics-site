@@ -45,14 +45,14 @@ const styles = {
             mb: [3, null, null, null, null, 0],
         },
         h4: {
-            fontSize: [2, null, null, 3],
+            fontSize: [2, null, null, 4],
             fontWeight: 'bold',
             lineHeight: 1.68,
             color: '#E1E1E6',
             mb: 3,
         },
         p: {
-            fontSize: [1, null, null, 2],
+            fontSize: [1, null, null, 3],
             lineHeight: 1.88,
             color: '#E1E1E6',
         },
@@ -60,7 +60,7 @@ const styles = {
     learnMore: {
         color: '#FF4D00',
         cursor: 'pointer',
-        fontSize: [1, null, null, '13px'],
+        fontSize: [1, null, null, 2],
         fontWeight: 700,
         display: 'inline-flex',
         alignItems: 'center',

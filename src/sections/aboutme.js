@@ -102,7 +102,7 @@ const styles = {
   content: {
     maxWidth: [null, null, null, 470, 560],
     textAlign: 'center',
-    marginTop: [0, null, null, 0, 0],
+    marginTop: [0, null, null, 0, -20],
     h1: {
       color: 'white',
       fontSize: [7, null, null, 12, 14],
@@ -133,7 +133,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     padding: 10,
-    marginTop: [0, null, null, 0, 0],
+    marginTop: [0, null, null, 0, -20],
     img: {
         borderRadius: '100%',
     },

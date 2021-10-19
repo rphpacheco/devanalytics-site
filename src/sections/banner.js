@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { rgba } from 'polished';
 import { jsx, Flex, Container, Heading, Text, Button } from 'theme-ui';
+import { Link } from 'react-scroll';
 import Image from 'components/image';
 import Play from 'components/icons/play';
 import dynamic from 'next/dynamic';
@@ -18,6 +19,8 @@ const ModalVideo = dynamic(
   },
   { ssr: false }
 );
+
+import { IoMdArrowDropupCircle } from 'react-icons/io'
 import banner from 'assets/images/banner.png';
 
 import icon1 from 'assets/images/icons/1.png';
@@ -83,6 +86,15 @@ const Banner = () => {
   };
   return (
     <section id="home" sx={styles.section}>
+      <Link 
+        to="home"
+        spy={true}
+        offset={-70}
+        smooth={true}
+        duration={500}
+      >
+        <IoMdArrowDropupCircle fill="#FF4D00" sx={styles.arrow} />
+      </Link>
       <Container sx={styles.container}>
         <div sx={styles.content}>
           <Heading as="h1">
@@ -135,7 +147,7 @@ const styles = {
     // pt: [8, null, null, null, 10, 14],
     // pb: [8, null, null, null, 10, 14],
     position: 'relative',
-    zIndex: 0,
+    zIndex: 10,
     '::before': {
       backgroundColor: 'white',
       content: `''`,
@@ -204,4 +216,12 @@ const styles = {
     display: 'flex',
     marginTop: [2, null, null, -4, -3]
   },
+  arrow: {
+    position: 'fixed',
+    cursor: 'pointer',
+    size: '30px',
+    borderRadius: '100%',
+    marginLeft: '94vw',
+    marginTop: '92vh',
+  }
 };
