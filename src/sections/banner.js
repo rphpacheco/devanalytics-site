@@ -23,10 +23,6 @@ const ModalVideo = dynamic(
 import { IoMdArrowDropupCircle } from 'react-icons/io'
 import banner from 'assets/images/banner.png';
 
-import icon1 from 'assets/images/icons/1.png';
-import icon2 from 'assets/images/icons/2.png';
-import icon3 from 'assets/images/icons/3.png';
-
 const data = [
   {
     id: 1,
@@ -118,7 +114,7 @@ const Banner = () => {
             <ModalVideo
               channel="youtube"
               isOpen={videoOpen}
-              videoId="ZNA9rmDsYVE"
+              videoId="g6l0Rg0ez68"
               onClose={() => setVideoOpen(false)}
             />
           </Flex>

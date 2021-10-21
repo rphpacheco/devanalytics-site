@@ -11,6 +11,7 @@ export default function Layout({ children }) {
         minHeight: '100vh',
         flexDirection: 'column',
         justifyContent: 'space-between',
+        backgroundColor: '#212122',
       }}
     >
       <Header />

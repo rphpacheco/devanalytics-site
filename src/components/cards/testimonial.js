@@ -22,6 +22,7 @@ export default Testimonial;
 
 const styles = {
   testimonial: {
+    color: '#c3c3c3',
     display: [null, null, null, 'flex'],
     textAlign: ['center', null, null, 'left'],
     px: [null, null, null, 10, 0],
@@ -39,13 +40,15 @@ const styles = {
   },
   content: {
     img: {
+      width: '160px',
+      width: '140px',
       mb: 2,
     },
     p: {
       fontSize: [2, null, null, 3],
       lineHeight: 1.94,
       letterSpacing: 'heading',
-      color: 'heading',
+      color: 'white',
     },
     h4: {
       color: 'heading',
