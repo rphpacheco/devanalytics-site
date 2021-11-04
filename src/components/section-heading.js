@@ -72,7 +72,7 @@ const styles = {
     lineHeight: [1.86, null, 2.2],
     mt: [5],
     maxWidth: 610,
-    m: ['10px auto 0'],
+    m: ['10px 0 0'],
   },
   learnMore: {
     mt: [3, null, null, 5],

@@ -8,16 +8,16 @@ export default [
     label: 'Sobre',
   },
   {
+    path: 'customers',
+    label: 'Clientes',
+  },
+  {
     path: 'services',
     label: 'Serviços',
   },
   {
     path: 'courses',
     label: 'Cursos',
-  },
-  {
-    path: 'content',
-    label: 'Conteúdo',
   },
   {
     path: 'contact',

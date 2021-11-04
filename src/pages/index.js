@@ -7,7 +7,7 @@ import Layout from 'components/layout';
 import Banner from 'sections/banner';
 import AboutMe from 'sections/aboutme';
 import Testimonials from 'sections/testimonials';
-import Addons from 'sections/addons';
+import Customers from 'sections/customers';
 import Dashboard from 'sections/dashboard';
 import UltimateFeatures from 'sections/ultimate-features';
 import Subscribe from 'sections/subscribe';
@@ -22,8 +22,7 @@ export default function IndexPage() {
         />
         <Banner />
         <AboutMe />
-        <Addons />
-        <Testimonials />
+        <Customers />
         <Dashboard />
         <UltimateFeatures />
         <Subscribe />

@@ -60,7 +60,7 @@ const styles = {
             'repeat(4, 130px)',
             'repeat(4, 150px)',
         ],
-        mt: [100],
-        mb: [6],
+        mt: [60],
+        mb: [0],
     },
 };

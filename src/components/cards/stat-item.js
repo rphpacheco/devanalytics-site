@@ -22,7 +22,7 @@ const styles = {
         textAlign: 'center',
     },
     value: {
-        color: 'white',
+        color: '#FF4D00',
         fontSize: [4, null, null, 10, null, 12],
         display: 'flex',
         justifyContent: 'center',

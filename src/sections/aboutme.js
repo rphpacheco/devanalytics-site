@@ -1,11 +1,9 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import React from 'react'
 import { rgba } from 'polished';
 import { jsx, Flex, Container, Heading, Text, Button, Link, Grid } from 'theme-ui';
 import TrackVisibility from 'react-on-screen';
 
-import Customers from 'components/cards/customers';
 import Image from 'components/image';
 import Play from 'components/icons/play';
 import aboutme from 'assets/images/aboutme.png';
@@ -14,7 +12,6 @@ import { GoMarkGithub } from 'react-icons/go';
 
 const AboutMe = () => {
   return (
-    <>
     <section id="about" sx={styles.section}>
       <Container sx={styles.container}>
         <Flex as="figure" sx={styles.illustration}>
@@ -72,8 +69,6 @@ const AboutMe = () => {
         </div>
       </Container>
     </section>
-    <Customers />
-    </>
   );
 };
 
