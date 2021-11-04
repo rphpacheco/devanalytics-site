@@ -23,8 +23,8 @@ export default function IndexPage() {
         <Banner />
         <AboutMe />
         <Customers />
-        <Dashboard />
-        <UltimateFeatures />
+        {/*<Dashboard />
+        <UltimateFeatures />*/}
         <Subscribe />
       </Layout>
     </ThemeProvider>
