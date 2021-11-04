@@ -95,7 +95,7 @@ const styles = {
     paddingTop: 4,
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-around'
+    justifyContent: 'space-between'
   },
   section: {
     pt: [6, null, null, 8, 10, 10],

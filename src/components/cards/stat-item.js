@@ -19,13 +19,15 @@ export default StatItem;
 
 const styles = {
     item: {
+        borderLeft: '4px solid #FF4D00',
+        paddingLeft: 6,
         textAlign: 'center',
     },
     value: {
-        color: '#FF4D00',
+        color: '#FFFFFF',
         fontSize: [4, null, null, 10, null, 12],
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'left',
         lineHeight: 1.38,
         letterSpacing: ['-0.5px', null, null, '-1px'],
     },
