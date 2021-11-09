@@ -11,43 +11,45 @@ import Currency from 'components/icons/currency';
 import Briefcase from 'components/icons/briefcase';
 import TabButton from 'components/tabs/tab-button';
 
-import taskManager from 'assets/images/task-manager.png';
+import reports from 'assets/images/reports.png';
+import apis from 'assets/images/apis.png';
+import embedded from 'assets/images/embedded.png';
 
 const data = [
   {
     id: 1,
-    title: 'Task Manager',
+    title: 'Reports Customizados',
     icon: <PieChart />,
-    image: taskManager,
+    image: reports,
   },
   {
     id: 2,
-    title: 'Create & Adjust',
+    title: 'Consultas em APIs',
     icon: <Cog />,
-    image: taskManager,
+    image: apis,
   },
   {
     id: 3,
-    title: 'Website optimizer',
+    title: 'Power BI Embedded',
     icon: <Currency />,
-    image: taskManager,
+    image: embedded,
   },
-  {
+  /* {
     id: 4,
     title: 'Budget tracker',
     icon: <Briefcase />,
     image: taskManager,
-  },
+  }, */
 ];
 
 const Dashboard = () => {
   return (
-    <section sx={styles.section}>
+    <section sx={styles.section} id="services">
       <Container>
         <SectionHeading
           sx={styles.heading}
-          title="Ultimate features in one dashboard"
-          description="he most intuitive design toolbox to create your next project. From ideation to user testing."
+          title="Confira os nossos serviços"
+          //description=""
         />
         <Tabs sx={styles.dashboardTabs} animated={{ tabPane: true }}>
           {data.map((tab) => (
@@ -65,7 +67,7 @@ export default Dashboard;
 
 const styles = {
   section: {
-    backgroundColor: rgba('#7141F8', 0.03),
+    backgroundColor: rgba('#212122', 0.03),
     pt: [8, null, null, 12],
     pb: [6, null, null, null, 12],
   },
@@ -73,7 +75,7 @@ const styles = {
     marginBottom: [6, null, null, 12],
     maxWidth: ['none', null, null, 565, null, 'none'],
     p: {
-      color: rgba('#02073E', 0.7),
+      color: rgba('white', 0.7),
       maxWidth: 445,
     },
   },
