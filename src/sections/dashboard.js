@@ -93,6 +93,7 @@ const styles = {
       outline: 0,
     },
     '.rc-tabs-nav-list': {
+      color: rgba('white', 0.8),
       flexWrap: ['wrap', null, null, 'unset'],
     },
     '.rc-tabs-tab': {
@@ -111,6 +112,7 @@ const styles = {
       },
     },
     '.rc-tabs-tab-active': {
+      color: 'textSecondary',
       backgroundColor: 'white',
       fontWeight: [400, null, null, 500],
       boxShadow: '0px 4px 6px rgba(125, 128, 170, 0.08)',
